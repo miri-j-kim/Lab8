@@ -16,18 +16,13 @@ const ProductList = () => {
     getProducts();
   }, [setProducts]);
 
-  const handleProductDeleted = (deletedProductId) => {
-    setProducts(currentProducts => currentProducts.filter (product => product.id !== deletedProductId ) ) ;
-    alert ('Product deleted successfully !');
-    };
-
   return (
     <div className="list-group">
       {products.map((product, index) => (
         <button
           key={product.id}
           className="list-group-item d-flex justify-content-between align-items-center hover-highlight"
-          onClick={({handleProductDeleted}) => navigate(`/product/${product.id}`)}
+          onClick={() => navigate(`/product/${product.id}`)}
         >
           <span>{index + 1}. {product.title}</span>
         </button>

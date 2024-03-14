@@ -39,11 +39,6 @@ const ProductDetails = () => {
     navigate(-1);
   };
 
-  const handleProductDeleted = (deletedProductId) => {
-    setProducts(currentProducts => currentProducts.filter (product => product.id !== deletedProductId ) ) ;
-    alert ('Product deleted successfully !');
-    };
-
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   if (!product) return <div>No product found.</div>;
@@ -63,7 +58,7 @@ const ProductDetails = () => {
             <li>Brand: {product.brand}</li>
           </ul>
           <button className="btn btn-primary me-2" onClick={() => navigate(`/product/edit/${product.id}`)}>Edit Product</button>
-          <DeleteButton productId={product.id} onProductDeleted={onProductDeleted} handleProductDeleted={handleProductDeleted} />
+          <DeleteButton productId={product.id} onProductDeleted={onProductDeleted} />
         </div>
       </div>
     </div>

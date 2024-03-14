@@ -1,3 +1,13 @@
+/*
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+Name : index.js
+Assignment : Lab 8, Exercise B-C
+Author ( s ) : Suyoung Jang, Miri Kim
+Submission : March 13, 2024
+Description : React.
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

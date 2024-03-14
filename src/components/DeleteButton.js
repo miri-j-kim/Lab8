@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { removeProduct } from '../services/apiService';
 import ConfirmModal from './ConfirmModal';
 
-const DeleteButton = ({ productId, onProductDeleted, handleProductDeleted}) => {
+const DeleteButton = ({ productId, onProductDeleted}) => {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -16,7 +16,6 @@ const DeleteButton = ({ productId, onProductDeleted, handleProductDeleted}) => {
       console.log(data);
       if (onProductDeleted) {
         onProductDeleted(data);
-        handleProductDeleted(productId);
       }
     } catch (err) {
       console.error('Failed to delete product:', err);
